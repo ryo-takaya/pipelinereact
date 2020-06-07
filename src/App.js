@@ -14,7 +14,7 @@ function App() {
     });
   }, []);
 
-  return <>{text}</>;
+  return <>ssssssssssssgi{text}</>;
 }
 
 export default App;
