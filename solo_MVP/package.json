@@ -1,0 +1,24 @@
+{
+  "name": "solo-mvp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "migration": " knex migrate:latest",
+    "rollback": " knex migrate:rollback",
+    "seed": "run knex seed:run"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "knex": "^0.21.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.4",
+    "pg": "^8.2.1"
+  }
+}
