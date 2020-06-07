@@ -2,7 +2,7 @@
 require("dotenv").config({ path: __dirname + "/.env" });
 console.log(process.env.DATABASE);
 console.log(process.env.USER);
-console.log(process.env.PORT);
+console.log(process.env.DBPORT);
 
 module.exports = {
   development: {
@@ -28,7 +28,7 @@ module.exports = {
       database: process.env.DATABASE,
       user: process.env.USER,
       password: process.env.PASSWORD,
-      port: process.env.PORT,
+      port: process.env.DBPORT,
     },
     pool: {
       min: 2,
