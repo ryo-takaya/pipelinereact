@@ -6,10 +6,10 @@ function App() {
   const [text, setText] = useState([]);
   useEffect(() => {
     axios.get("/api").then((res) => {
-      console.log(res.data);
-      const name = res.data.map((object) => object.user_name);
-      console.log(name);
-      setText(name);
+      console.log(res);
+      // const name = res.data.map((object) => object.user_name);
+      // console.log(name);
+      // setText(name);
     });
   }, []);
 

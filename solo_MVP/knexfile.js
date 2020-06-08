@@ -3,16 +3,11 @@ require("dotenv").config({ path: __dirname + "/.env" });
 console.log(process.env.DATABASE);
 console.log(process.env.USER);
 console.log(process.env.DBPORT);
-
+`postgres://${process.env.USER}@127.0.0.1:5432/truckstop`;
 module.exports = {
   development: {
     client: "pg",
-    connection: {
-      database: process.env.DATABASE,
-      user: process.env.USER,
-      password: process.env.PASSWORD,
-      port: process.env.DBPORT,
-    },
+    connection: `postgres://${process.env.USER}@127.0.0.1:5432/ballettest`,
     migrations: {
       directory: "./db/migrations",
       tableName: "knex_migrations",
@@ -24,12 +19,7 @@ module.exports = {
 
   staging: {
     client: "postgresql",
-    connection: {
-      database: process.env.DATABASE,
-      user: process.env.USER,
-      password: process.env.PASSWORD,
-      port: process.env.DBPORT,
-    },
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10,

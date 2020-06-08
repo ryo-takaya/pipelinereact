@@ -21,14 +21,14 @@ app.use(express.static(path.join(__dirname, "..", "build")));
 //app.use(express.static(path.resolve("..", "dist")));
 
 app.get("/api", (req, res) => {
-  res.status(200);
-  res.send("sssss");
-  // db.select("*")
-  //   .from("users")
-  //   .then((result) => {
-  //     console.log(result);
-  //     res.send(result);
-  //   });
+  // res.status(200);
+  // res.send("sssss");
+  db.select("*")
+    .from("users")
+    .then((result) => {
+      console.log(result);
+      res.send(result);
+    });
 });
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
